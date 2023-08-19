@@ -38,7 +38,7 @@ const News = (props)=>{
     // this.setState({
     //   loading: true,
     // });
-    let data = await fetch(url);
+    let data = await fetch(url,{mode:"cors"});
     props.setProgress(30);
     let parseData = await data.json();
     props.setProgress(70);
